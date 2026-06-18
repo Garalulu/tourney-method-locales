@@ -13,6 +13,7 @@ unreleased strings are not published here.
 - Russian (`ru`)
 - Simplified Chinese (`zh-Hans`)
 - Traditional Chinese (`zh-Hant`)
+and many more!
 
 ## Contributing
 

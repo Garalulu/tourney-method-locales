@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'locales' => ['en', 'ko', 'ru', 'zh-Hans', 'zh-Hant'],
+    'locales' => ['en', 'ko', 'ru', 'zh-Hans', 'zh-Hant', 'es', 'af', 'ar', 'ca', 'cs', 'da', 'nl', 'fi', 'fr', 'de', 'el', 'he', 'hu', 'it', 'ja', 'no', 'pl', 'pt-PT', 'pt-BR', 'ro', 'sr', 'sv-SE', 'tr', 'uk', 'vi'],
     'files' => [
         'auth.php',
         'common.php',
