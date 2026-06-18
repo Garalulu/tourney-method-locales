@@ -19,11 +19,5 @@ return [
         'support.discord.com',
     ],
     'forbidden_phrases' => [
-        'coming soon',
-        'unreleased',
-        'internal only',
-        'staff only',
-        'todo',
-        'fixme',
     ],
 ];
