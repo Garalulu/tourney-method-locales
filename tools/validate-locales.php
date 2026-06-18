@@ -48,16 +48,19 @@ foreach ($policy['files'] as $file) {
     $sourcePath = $root."/lang/en/{$file}";
     if (! is_file($sourcePath)) {
         $errors[] = "Missing required file: lang/en/{$file}";
+
         continue;
     }
     try {
         $sourceValues = require $sourcePath;
     } catch (Throwable $exception) {
         $errors[] = "Invalid PHP in lang/en/{$file}: {$exception->getMessage()}";
+
         continue;
     }
     if (! is_array($sourceValues)) {
         $errors[] = "Locale file must return an array: lang/en/{$file}";
+
         continue;
     }
     $source[$file] = $flatten($sourceValues);
@@ -67,16 +70,19 @@ foreach ($policy['locales'] as $locale) {
         $path = $root."/lang/{$locale}/{$file}";
         if (! is_file($path)) {
             $errors[] = "Missing required file: lang/{$locale}/{$file}";
+
             continue;
         }
         try {
             $values = require $path;
         } catch (Throwable $exception) {
             $errors[] = "Invalid PHP in lang/{$locale}/{$file}: {$exception->getMessage()}";
+
             continue;
         }
         if (! is_array($values)) {
             $errors[] = "Locale file must return an array: lang/{$locale}/{$file}";
+
             continue;
         }
         $flat = $flatten($values);
